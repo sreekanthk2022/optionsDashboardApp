@@ -12,6 +12,8 @@ from threading import Thread
 import matplotlib.pyplot as plt
 import numpy as np
 import datetime as dt
+import lxml
+
 
 
 # cwd = os.chdir("C:\\Algo Trading\\Data")
