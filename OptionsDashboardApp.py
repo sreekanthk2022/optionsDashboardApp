@@ -22,7 +22,7 @@ headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/
 
 daterange = pd.bdate_range("03-12-2021", "03-11-2022")
 
-nseFNOSecurities_df = pd.read_csv("C:\\Algo Trading\\Data\\SecurityMaster\\FONSEScripMaster.txt")[['InstrumentName', 'ExchangeCode']]
+nseFNOSecurities_df = pd.read_csv(".\\Data\FONSEScripMaster.txt")[['InstrumentName', 'ExchangeCode']]
 nseFNOSecurities_df = nseFNOSecurities_df[nseFNOSecurities_df['InstrumentName']=="FUTSTK"].\
                         drop_duplicates('ExchangeCode', keep='last').\
                             drop(['InstrumentName'],axis=1).\
