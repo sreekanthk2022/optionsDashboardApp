@@ -41,7 +41,7 @@ def get_session_cookie():
     sess_Cookie = requests.Session()
     cookies = dict()
 
-    request = sess_Cookie.get(url_oc, headers=headers, timeout=5)
+    request = sess_Cookie.get(url_oc, headers=headers, timeout=10)
     cookies = dict(request.cookies)
 
     return cookies
