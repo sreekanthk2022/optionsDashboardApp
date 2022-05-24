@@ -295,7 +295,7 @@ if AnalysisType == 'Overview':
     session = requests.Session()
     r = session.get(url,headers=headers,timeout=10)
 
-    breakoutDF = pd.read_html(r.text,flavor='html5lib')[0].dropna()
+    breakoutDF = pd.read_html(r.text)[0].dropna()
     breakoutDF.drop(breakoutDF[breakoutDF['Name'].astype(str).str[0] == '('].index, inplace = True)
     breakoutDF[['Close', 'SMA 5', 'SMA 10', 'SMA 15', 'SMA 20', 'SMA 50', 'SMA 100', 'SMA 200']] = breakoutDF[['Close', 'SMA 5', 'SMA 10', 'SMA 15', 'SMA 20', 'SMA 50', 'SMA 100', 'SMA 200']].astype('double').astype('int')
 
